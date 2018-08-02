@@ -1,0 +1,8 @@
+db.getCollections("nazwa").find()
+db.users.find()
+show dbs
+use nazwa_db
+show collections
+help
+mongo
+mongod

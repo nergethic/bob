@@ -1,0 +1,45 @@
+﻿<!-- python -m http.server 4000 -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>bob</title>
+    <script src="libs/three.js"></script>
+    <script src="js/Main.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Intro.js"></script>
+    <script src="js/ElementSiatki.js"></script>
+    <script src="js/Klocek.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/notificationFx.js"></script>
+    <script src="js/classie.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script>
+        let main
+        window.onload = () => {
+            let client = io()
+            main = new Main(client)
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="overlay">
+            <div id="panel">
+                <div id="loginDiv">
+                    <p id="pLogin">login</p>
+                    <input type="text" name="login" id="login"/>
+                </div>
+                <div id="passDiv">
+                    <p id="pPass">password</p>
+                    <input type="password" name="password" id="passwd"/>
+                </div>
+                <input type="button" value="REGISTER" id="add"/>
+                <p id="pAlready">login</p>
+                <input type="button" value="clear" id="clearDB" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
